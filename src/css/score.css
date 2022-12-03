@@ -1,0 +1,152 @@
+
+/*タブ切り替え全体のスタイル*/
+.menu {
+    /* margin-top: 50px;
+    padding-bottom: 40px; */
+    background-color: var(--primary-bg-color);
+    box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    padding: 0;
+}
+  
+/*タブのスタイル*/
+.menu-item, .menu-item-remain-area {
+    width: 100px;
+    height: 30px;
+    border-bottom: 3px solid var(--primary-border-color);
+    background-color: var(--primary-bg-color);
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #565656;
+    display: block;
+    float: left;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    opacity: 0.75;  
+}
+.menu-item-home {
+    background-color: var(--primary-theme-color);
+    border-color: var(--primary-theme-color);
+}
+/*ラジオボタンを全て消す*/
+input[name="menu-item"] {
+    display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.menu-content {
+    display: none;
+    padding: 0;
+    clear: both;
+    overflow: hidden;
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#score:checked ~ #score-content,
+#show:checked ~ #show-content,
+#draw:checked ~ #draw-content,
+#correction:checked ~ #correction-content {
+    display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.menu input:checked + .menu-item {
+    border-bottom: 3px solid var(--primary-theme-color);
+    font-weight: bold;
+}
+
+/* タブ共通 */
+.btn-score-wrapper {
+    padding: 0;
+    display: flex;
+    background-color: var(--primary-bg-color);
+}
+.btn-score, .btn-score-show, .label-show {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-width: 2px;
+    border-radius: 0;
+    border-style: solid;
+    font-size: 16pt;
+    display: inline-block;
+    transition: .1s ease;
+    vertical-align: middle;
+}
+.btn-score-show, .label-show {
+    width: 100px;
+    font-size: 10px;
+}
+.btn-score:active, .btn-score-show:active{
+    opacity: .2;
+}
+
+/* 採点タブ */
+.btn-score-correct {
+    background-color: var(--score-correct-color);
+    color: white;
+}
+.btn-score-partial {
+    background-color: var(--score-partial-color);
+}
+.btn-score-hold {
+    background-color: var(--score-hold-color);
+    color: white;
+}
+.btn-score-incorrect {
+    background-color: var(--score-incorrect-color);
+    color: white;
+}
+.input-score-point {
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+}
+.input-score-point:placeholder-shown {
+    font-size: 10px;
+}
+
+/* 表示タブ */
+.label-show {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    width: 90px;
+    border-width: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.label-show input {
+    margin: 0;
+    padding: 0;
+    margin-right: 5px;
+    vertical-align: middle;
+    position: relative;
+}
+.label-show-unscored {
+    border-color: var(--score-unscored-color);
+}
+.label-show-correct {
+    border-color: var(--score-correct-color);
+}
+.label-show-partial {
+    border-color: var(--score-partial-color);
+}
+.label-show-hold {
+    border-color: var(--score-hold-color);
+}
+.label-show-incorrect {
+    border-color: var(--score-incorrect-color);
+}
+.label-show-process {
+    width: 120px;
+}

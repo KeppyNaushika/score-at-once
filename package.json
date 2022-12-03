@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "score-at-once",
+  "version": "v0.0.1-alpha",
+  "description": "完全無料・オフライン完結の採点ソフトウェア",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/electron/score-at-once",
   "keywords": [
     "Electron",
     "quick",
@@ -14,8 +14,8 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "KeppyNaushika",
+  "license": "AGPL-3.0",
   "devDependencies": {
     "electron": "^19.0.8"
   }

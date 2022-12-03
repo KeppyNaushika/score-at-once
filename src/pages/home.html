@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ホーム</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>一括採点</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+  <h1>一括採点</h1>
+  <h2>試験一覧</h2>
+  <div id="container">
+    <table>
+      <thead>
+        <tr>
+          <th class="select"></th>
+          <th class="name">試験</th>
+          <th class="date">試験日</th>
+          <th class="count">人数</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="select selected"><a class="material-icons" href="#">radio_button_unchecked</a></td>
+          <td class="name">第1回定着度確認テスト</td>
+          <td class="date">2022/4/1</td>
+          <td class="count">120 人</td>
+        </tr>
+        <tr>
+          <td class="select"><a class="material-icons" href="#">radio_button_unchecked</a></td>
+          <td class="name">第1回定着度確認テスト</td>
+          <td class="date">2022/4/1</td>
+          <td class="count">120 人</td>
+        </tr>
+      </tbody>
+    </table>
+    <aside id="sub-area">
+      <nav>
+        <ul>
+          <li><a href="#">
+            <span class="material-icons">group_add</span>
+            <div>試験情報と名簿</div>
+          </a></li>
+          <li><a href="#">
+            <span class="material-icons">note_add</span>
+            <div>答案の読込</div>
+          </a></li>
+          <li><a href="#">
+            <span class="material-icons">crop</span>
+            <div>解答枠の指定</div>
+          </a></li>
+          <li><a class="score" href="./score.html">
+            <span class="material-icons">add_task</span>
+            <div>一括採点する</div>
+          </a></li>
+          <li><a href="#">
+            <span class="material-icons">print</span>
+            <div>採点済答案の印刷</div>
+          </a></li>
+          <li><a href="#">
+            <span class="material-icons">table_view</span>
+            <div>採点データ</div>
+          </a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  <p>
+    KeppyNaushika 2022, some rights reserved.
+  </p>
+  <p>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+  </p>
+</body>
+</html>

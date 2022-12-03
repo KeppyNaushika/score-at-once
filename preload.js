@@ -10,3 +10,14 @@ window.addEventListener('DOMContentLoaded', () => {
     replaceText(`${type}-version`, process.versions[type])
   }
 })
+
+const { contextBridge, ipcRenderer } = require('electron')
+
+contextBridge.exposeInMainWorld('myapi', {
+    nyan: async (data) => await ipcRenderer.invoke('nyan', data)
+  }
+)
+
+contextBridge.exposeInMainWorld('score', {
+  loadProjects: async (data) => await ipcRenderer.invoke('loadProjects', data)
+})

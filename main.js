@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
+const fs = require('fs')
 
 function createWindow () {
   // Create the browser window.
@@ -16,7 +17,7 @@ function createWindow () {
   mainWindow.loadFile('index.html')
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -41,3 +42,11 @@ app.on('window-all-closed', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+ipcMain.handle('nyan', (event, data) => {
+  return(`${data}にゃん`)
+})
+
+ipcMain.handle('loadProjects', (event, data) => {
+  const dictProjects = JSON.parse(fs.readFileSync('./data/projects.json', 'utf-8'))
+  return dictProjects
+})

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN” “http://www.w3.org/TR/html4/strict.dtd”>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>一括採点する</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/score.css">
+</head>
+<body>
+  <div class="menu">
+    <a class="menu-item menu-item-home" href="./home.html">ホーム</a>
+
+    <input id="score" type="radio" name="menu-item" checked>
+    <label class="menu-item" for="score">採点</label>
+
+    <input id="show" type="radio" name="menu-item">
+    <label class="menu-item" for="show">表示</label>
+
+    <input id="draw" type="radio" name="menu-item">
+    <label class="menu-item" for="draw">描画</label>
+
+    <input id="correction" type="radio" name="menu-item">
+    <label class="menu-item" for="correction">添削</label>
+
+    <div class="menu-content" id="score-content">
+      <div class="btn-score-wrapper">
+        <button class="btn-score btn-score-unscored" title="未採点にする (Q)">―</button>
+        <button class="btn-score btn-score-correct" title="正答にする (E)">◯</button>
+        <button class="btn-score btn-score-partial" title="部分点にする (F)">△</button>
+        <button class="btn-score btn-score-hold" title="保留にする (J)">？</button>
+        <button class="btn-score btn-score-incorrect" title="誤答にする (O)">✕</button>
+        <input class="input-score-point" type="number" placeholder="部分点を入力">
+      </div>
+    </div>
+    <div class="menu-content" id="show-content">
+      <div class="btn-score-wrapper">
+        <label class="label-show label-show-unscored"><input class="show-unscored" type="checkbox">未採点を表示<br>(Shift + Q)</label>
+        <label class="label-show label-show-correct"><input class="show-correct" type="checkbox">正答を表示<br>(Shift + E)</label>
+        <label class="label-show label-show-partial"><input class="show-partial" type="checkbox">部分点を表示<br>(Shift + F)</label>
+        <label class="label-show label-show-hold"><input class="show-hold" type="checkbox">保留を表示<br>(Shift + J)</label>
+        <label class="label-show label-show-incorrect"><input class="show-incorrect" type="checkbox">誤答を表示<br>(Shift + O)</label>
+        <label class="label-show label-show-name"><input name="show-name" type="checkbox">氏名の表示<br>(Shift + N)</label>
+        <label class="label-show label-show-process"><input name="show-name" type="checkbox">導出過程の表示<br>(Shift + P)</label>
+      </div>
+    </div>
+    <div class="menu-content" id="draw-content">
+    </div>
+    <div class="menu-content" id="correction-content">
+    </div>
+  </div>
+</body>
+</html>

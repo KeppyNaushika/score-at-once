@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: ZenMaruGothic;
+    src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+      url(../fonts/material-design-icons/MaterialIconsOutlined-Regular.otf) format('opentype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;  /* Preferred icon size */
+    vertical-align: -2px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", 'Material Icons';
+    height: 100%;
+    width: 100%;
+
+    --primary-bg-color: rgb(245, 245, 245);
+    --secondary-bg-color: white;
+    --primary-border-color: rgb(192, 192, 192);
+    --secondary-border-color: rgb(192, 192, 192);
+    --primary-theme-color: #6abd5a;
+    --secondary-theme-color: rgb(255, 243, 132);
+    --score-unscored-color: gray;
+    --score-correct-color: green;
+    --score-partial-color: yellow;
+    --score-hold-color: blue;
+    --score-incorrect-color: red;
+
+
+}
+CSS
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+} 

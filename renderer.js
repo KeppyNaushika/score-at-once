@@ -4,3 +4,12 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
+
+(
+  async ()=>{
+    const message = await window.myapi.nyan('はい')
+    console.log(message)  // "はいにゃん"
+    const content = document.getElementById("content")
+    content.innerHTML = message
+  }
+)()
